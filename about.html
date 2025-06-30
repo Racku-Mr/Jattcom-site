@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About | JATT COM</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Share Tech Mono', monospace;
+      background: linear-gradient(160deg, #000000 0%, #0a0f0d 100%);
+      color: #00ffcc;
+      line-height: 1.7;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px 20px;
+      animation: fadeInDown 1s ease-out;
+    }
+
+    header h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3rem;
+      color: #00ffcc;
+      text-shadow: 0 0 10px #00ffcc, 0 0 25px #00ffcc;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+      animation: fadeIn 1.2s ease-in;
+    }
+
+    .section {
+      background-color: rgba(0, 255, 204, 0.07);
+      border: 1px solid #00ffcc33;
+      border-left: 5px solid #00ffcc;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 30px;
+      box-shadow: 0 0 12px #00ffcc22;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .section:hover {
+      box-shadow: 0 0 25px #00ffcc55;
+      transform: scale(1.01);
+    }
+
+    .section h2 {
+      font-family: 'Orbitron', sans-serif;
+      color: #00ffcc;
+      text-shadow: 0 0 8px #00ffccbb;
+      margin-bottom: 15px;
+    }
+
+    .highlight {
+      color: #facc15;
+      font-weight: bold;
+    }
+
+    .danger {
+      color: #ff2c2c;
+      font-weight: bold;
+    }
+
+    .rules ul {
+      padding-left: 20px;
+    }
+
+    .rules li {
+      margin-bottom: 10px;
+      color: #e0fdf8;
+    }
+
+    .rules li::before {
+      content: "⚠ ";
+      color: #00ffcc;
+    }
+
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 15px 0;
+    }
+
+    .badge {
+      background-color: #0f0f0f;
+      border: 1px solid #00ffcc66;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 0 8px #00ffcc33;
+      color: #00ffcc;
+    }
+
+    .join-btn {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 12px 25px;
+      background-color: #00ffcc;
+      color: #000;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      box-shadow: 0 0 15px #00ffcc88;
+      transition: 0.3s;
+    }
+
+    .join-btn:hover {
+      background-color: #00ffee;
+      box-shadow: 0 0 20px #00ffeeaa;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #999;
+    }
+
+    /* Animations */
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1><i class="fas fa-user-secret"></i> ABOUT JATT COM</h1>
+  </header>
+
+  <div class="container">
+
+    <div class="section">
+      <h2><i class="fas fa-history"></i> Origin & Comeback</h2>
+      <p>
+        <span class="highlight">JATT COM</span> was the <span class="danger">first-ever Punjabi digital clan</span> that made waves across Instagram and beyond.
+        After shutting down in <strong>2024</strong>, it has returned in <strong>2025</strong> — deadlier than ever.
+        Now it includes <strong>old legends</strong> and <strong>new-gen fighters</strong>, operating across <span class="highlight">all of India</span>. 🌐
+      </p>
+
+      <div class="badges">
+        <div class="badge"><i class="fas fa-fire"></i> Old Gen Fighter</div>
+        <div class="badge"><i class="fas fa-bolt"></i> New Wave</div>
+        <div class="badge"><i class="fas fa-shield-alt"></i> Clan Revivalist</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2><i class="fas fa-bullseye"></i> Mission: Expose Hate. Crush Ego.</h2>
+      <p>
+        JATT COM doesn’t play safe. It was built to:
+      </p>
+      <ul>
+        <li>⛔ Counter <span class="danger">religious hate</span> & online division</li>
+        <li>🛑 Take down harmful pages, fake OGs, and shady influencers</li>
+        <li>💣 Destroy ego-filled legacy teams who spread negativity</li>
+        <li>🧠 Build a clan based on <span class="highlight">skills, unity & respect</span></li>
+      </ul>
+
+      <div class="badges">
+        <div class="badge"><i class="fas fa-ban"></i> No Hate</div>
+        <div class="badge"><i class="fas fa-dragon"></i> Ego Slayer</div>
+        <div class="badge"><i class="fas fa-users-cog"></i> Skill-Based</div>
+      </div>
+    </div>
+
+    <div class="section rules">
+      <h2><i class="fas fa-gavel"></i> Official Rules</h2>
+      <ul>
+        <li>You must stay normally active — no ghost mode.</li>
+        <li>We don't care if you're old-gen or new — loyalty is everything.</li>
+        <li><span class="danger">No religious hate</span> — instant kick.</li>
+        <li>No betrayal — or you’ll face JATT COM as your worst enemy.</li>
+        <li>Respect all founding members — non-negotiable.</li>
+        <li>No internal fights — unity above ego.</li>
+      </ul>
+
+      <div class="badges">
+        <div class="badge"><i class="fas fa-check-circle"></i> Active</div>
+        <div class="badge"><i class="fas fa-handshake"></i> Loyal</div>
+        <div class="badge"><i class="fas fa-heart"></i> Unity First</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2><i class="fas fa-globe-asia"></i> PAN-INDIA REACH</h2>
+      <p>
+        JATT COM now operates <span class="highlight">nationwide</span> — from Punjab to Delhi, Mumbai to South India.
+        It’s not just a team anymore — it's a <span class="danger">network</span>, and it moves like shadows with neon eyes. ⚡
+      </p>
+
+      <div class="badges">
+        <div class="badge"><i class="fas fa-map-marker-alt"></i> PAN India</div>
+        <div class="badge"><i class="fas fa-satellite-dish"></i> Digital Force</div>
+      </div>
+    </div>
+
+    <div class="section" style="text-align: center;">
+      <h2><i class="fab fa-telegram-plane"></i> Join The Clan</h2>
+      <p>Ready to step into the neon shadows?</p>
+      <a href="https://t.me/jattcomjoin" class="join-btn" target="_blank">
+        <i class="fab fa-telegram-plane"></i> Join JATT COM on Telegram
+      </a>
+    </div>
+
+  </div>
+
+  <footer>
+    &copy; 2025 JATT COM | Respect the Code, or fear the comeback.
+  </footer>
+
+</body>
+</html>

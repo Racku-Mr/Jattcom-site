@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JATT COM | Terminal</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@700&family=Poppins:wght@500&family=Inter&family=Roboto+Slab&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+  <!-- AOS Animations -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Typed.js -->
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+  <!-- Styles -->
+  <style>
+    body {
+      background: url('https://iili.io/FReKkfR.md.jpg') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .glow-line {
+      color: #00ffcc;
+      text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        text-shadow: 0 0 5px #00ffcc, 0 0 10px #00ffcc;
+      }
+      50% {
+        text-shadow: 0 0 15px #00ffff, 0 0 25px #00ffff;
+      }
+    }
+
+    .glitch {
+      position: relative;
+      color: #00ffcc;
+      animation: glitch 2s infinite;
+    }
+
+    @keyframes glitch {
+      0% { transform: translate(0); }
+      20% { transform: translate(-1px, 1px); }
+      40% { transform: translate(-1px, -1px); }
+      60% { transform: translate(1px, 1px); }
+      80% { transform: translate(1px, -1px); }
+      100% { transform: translate(0); }
+    }
+
+    .glow-on-hover {
+      box-shadow: 0 0 5px #00ffcc, 0 0 15px #00ffcc;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .glow-on-hover:hover {
+      box-shadow: 0 0 10px #00ffff, 0 0 25px #00ffff;
+      transform: translateY(-2px);
+    }
+
+    .icon-animate {
+      transition: transform 0.3s ease;
+    }
+
+    .glow-on-hover:hover .icon-animate {
+      transform: translateX(4px);
+    }
+
+    .terminal-cursor::after {
+      content: '_';
+      animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+  </style>
+</head>
+
+<body class="bg-black text-green-400 font-mono min-h-screen flex items-center justify-center bg-cover bg-center relative">
+
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-black bg-opacity-80"></div>
+
+  <!-- Terminal Container -->
+  <div class="container mx-auto px-4 py-12 relative z-10 max-w-4xl">
+    <div id="terminal" class="bg-black bg-opacity-90 border-2 border-green-500 rounded-lg p-6 shadow-lg shadow-green-500/20">
+
+      <!-- Terminal Header -->
+      <div class="flex items-center mb-4">
+        <div class="h-3 w-3 bg-red-500 rounded-full mr-2"></div>
+        <div class="h-3 w-3 bg-yellow-500 rounded-full mr-2"></div>
+        <div class="h-3 w-3 bg-green-500 rounded-full"></div>
+        <div class="text-green-400 ml-4 text-sm">JATT_COM_TERMINAL</div>
+      </div>
+
+      <!-- Terminal Content -->
+      <div class="terminal-content h-64 overflow-y-auto pr-2 text-sm md:text-base">
+        <div class="mb-2 glow-line"><span class="text-green-400">$</span> Booting JATT COM Terminal...</div>
+        <div class="mb-2 glow-line"><span class="text-green-400">$</span> Loading Assets...</div>
+        <div class="mb-2 glow-line"><span class="text-green-400">$</span> Verifying Members...</div>
+        <div class="mb-4 glow-line"><span class="text-green-400">$</span> System Online.</div>
+      </div>
+
+      <!-- Welcome Title -->
+      <div id="welcome-title" class="text-center mb-8 hidden">
+        <h1 class="text-4xl md:text-6xl font-bold mb-4 font-rubik glitch" data-text="Welcome to JATT COM">Welcome to JATT COM</h1>
+        <p class="text-green-300 mb-6 font-inter">MEET TOP HACKERS BANNER PLUGERS & EDITORS</p>
+      </div>
+
+      <!-- ENTER Button -->
+      <div class="text-center mt-8 hidden" id="enter-button">
+        <a href="dashboard.html" class="inline-flex items-center gap-2 px-8 py-3 bg-green-600 hover:bg-green-500 text-white font-bold rounded-lg transition-all duration-300 glow-on-hover font-poppins">
+          [ ENTER WEBSITE ]
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 icon-animate" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      setTimeout(() => {
+        const terminalContent = document.querySelector('.terminal-content');
+        const welcomeTitle = document.getElementById('welcome-title');
+        const enterButton = document.getElementById('enter-button');
+
+        terminalContent.innerHTML += `
+          <div class="mb-2 glow-line terminal-cursor"><span class="text-green-400">$</span> <span id="typed"></span></div>
+        `;
+
+        const typed = new Typed('#typed', {
+          strings: ['Initializing interface...', 'Establishing secure connection...', 'Access level: ROOT GRANTED...'],
+          typeSpeed: 50,
+          backSpeed: 25,
+          loop: false,
+          onComplete: () => {
+            setTimeout(() => {
+              welcomeTitle.classList.remove('hidden');
+              enterButton.classList.remove('hidden');
+              AOS.init();
+            }, 500);
+          }
+        });
+      }, 2000);
+    });
+  </script>
+</body>
+</html>
